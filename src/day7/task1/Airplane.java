@@ -50,8 +50,12 @@ public class Airplane {
     }
 
     public static void compareAirplanes(Airplane airplane1, Airplane airplane2) {
-        String msg = airplane1.length > airplane2.length ?
-                airplane1.producer : airplane2.producer;
-        System.out.println(msg + " is bigger");
+        if (airplane1.length > airplane2.length) {
+            System.out.println(airplane1.producer + "is bigger");
+        } else if (airplane2.length > airplane1.length) {
+            System.out.println(airplane2.producer + "is bigger");
+        } else {
+            System.out.println("These airplanes are equal");
+        }
     }
 }
