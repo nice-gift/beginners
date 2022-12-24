@@ -1,8 +1,8 @@
 package day11;
 
 public class Warehouse {
-    int counterOrder;
-    int balance;
+    private int counterOrder;
+    private int balance;
 
     public int getCounterOrder() {
         return counterOrder;

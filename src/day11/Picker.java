@@ -15,8 +15,8 @@ public class Picker implements Worker {
     @Override
     public void doWork() {
         salary += 80;
-        warehouse.counterOrder++;
-        if (warehouse.counterOrder == 1500) {
+        warehouse.setCounterOrder(warehouse.getCounterOrder() + 1);
+        if (warehouse.getCounterOrder() == 1500) {
             bonus();
         }
     }
@@ -25,5 +25,10 @@ public class Picker implements Worker {
     public void bonus() {
         salary *= 3;
         System.out.println("Picker got bonus");
+    }
+
+    @Override
+    public String toString() {
+        return "Picker salary " + salary;
     }
 }

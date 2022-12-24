@@ -15,8 +15,8 @@ public class Courier implements Worker {
     @Override
     public void doWork() {
         salary += 100;
-        warehouse.balance += 1000;
-        if (warehouse.balance == 1_000_000) {
+        warehouse.setBalance(warehouse.getBalance() + 1000);
+        if (warehouse.getBalance() == 1_000_000) {
             bonus();
         }
     }
@@ -25,5 +25,10 @@ public class Courier implements Worker {
     public void bonus() {
         salary *= 2;
         System.out.println("Courier got bonus");
+    }
+
+    @Override
+    public String toString() {
+        return "Courier salary " + salary;
     }
 }

@@ -11,9 +11,7 @@ public class Task1 {
             picker.doWork();
         }
 
-        System.out.println(warehouse.toString());
-        System.out.println("Courier salary " + courier.getSalary());
-        System.out.println("Picker salary " + picker.getSalary());
+        System.out.println(warehouse + " " + picker + " " + courier);
 
         Warehouse warehouse2 = new Warehouse();
         Courier courier2 = new Courier(warehouse2);
@@ -22,12 +20,7 @@ public class Task1 {
         courier2.doWork();
         picker2.doWork();
 
-        System.out.println(warehouse.toString());
-        System.out.println("Courier salary " + courier.getSalary());
-        System.out.println("Picker salary " + picker.getSalary());
-        System.out.println(warehouse2.toString());
-        System.out.println("Courier2 salary " + courier2.getSalary());
-        System.out.println("Picker2 salary " + picker2.getSalary());
-
+        System.out.println(warehouse + " " + picker + " " + courier);
+        System.out.println(warehouse2 + " " + picker2 + " " + courier2);
     }
 }
